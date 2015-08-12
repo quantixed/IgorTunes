@@ -1,2 +1,15 @@
 # IgorTunes
-Parse iTunes xml and algorithmically determine a favourite songs playlist 
+Parse iTunes xml and algorithmically determine a "favourite songs" playlist 
+
+Working on a copy of 'iTunes Music Library.xml' run the parsenoko.rb script using
+find . -name "*.xml" -exec ruby parsenoko.rb {} > playlist.tsv \;
+This file needs to be cleaned slightly before importing into Igor see
+http://wp.me/p4Ir7n-95
+Import using
+LoadWave /N=Column/O/K=2/J/V={"\t"," $",0,0}
+and then run
+•iTunes()
+•DateRead()
+•Predictor()
+•WritePlayList(50) //whatever length of playlist you'd like
+Save as *.m3u file and drag back into iTunes
