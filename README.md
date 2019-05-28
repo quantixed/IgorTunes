@@ -1,12 +1,8 @@
 # IgorTunes
 
-### Parse iTunes xml and algorithmically determine a "favourite songs" playlist 
+### Parse iTunes Library xml and algorithmically determine a "favourite songs" playlist 
 
-Working on a copy of 'iTunes Music Library.xml' run the parsenoko.rb script using
-
-` find . -name "*.xml" -exec ruby parsenoko.rb {} > playlist.tsv`
-
-This file needs to be cleaned slightly before importing into Igor see [this blog post](http://wp.me/p4Ir7n-95).
+Shell script will extract data from `iTunes Library.xml` using ruby/nokogiri and then clean it for importing into Igor Pro.
 
 You import the data using:
 
