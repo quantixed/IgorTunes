@@ -4,15 +4,6 @@
 
 Shell script will extract data from `iTunes Library.xml` using ruby/nokogiri and then clean it for importing into Igor Pro.
 
-You import the data using:
+Place xml file in the same directory as `parsenoko.rb` and `xml2csv.sh` and run the shell script (requires ruby/nokogiri). The XML file will be processed into a tsv called `library.tsv`.
 
-`LoadWave /N=Column/O/K=2/J/V={"\t"," $",0,0}`
-
-and then run
-
-- `iTunes()`
-- `DateRead()`
-- `Predictor()`
-- `WritePlayList(50) //whatever length of playlist you'd like`
-
-Save as *.m3u file and drag back into iTunes.
+Now in Igor, using `IgorTunes.ipf`, run the menu command to simply load the data or to load the data and make an algorythmically perfect playlist of fifty songs. Igor offers to save this as `playlist.txt`. Save as *.m3u file and drag back into iTunes.
